@@ -2,7 +2,6 @@ import React from "react";
 import "./styles.css";
 import { ReactComponent as WeightIcon } from "../../../../assets/images/icons/weight.svg";
 import { ReactComponent as HeightIcon } from "../../../../assets/images/icons/height.svg";
-import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.svg";
 import { AboutTitle } from "../../atoms/AboutTitle";
 import { ChipGroup } from "../../molecules/ChipGroup";
 
@@ -17,7 +16,7 @@ const PokemonCard = ({ pokemon }) => {
         <span className="pokemon-number">#{pokemon.id}</span>
       </div>
       <div className="pokemon-attributes">
-        <img src={bulbasaur} alt="" className="poke-image"></img>
+        <img src={pokemon.src} alt="" className="poke-image"></img>
         <ChipGroup types={pokemon.types} />
         <AboutTitle type={mainType} />
         <div className="pokemon-data">

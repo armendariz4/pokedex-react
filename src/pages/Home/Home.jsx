@@ -8,7 +8,7 @@ const pokemons = [
     height: 4.3,
     weight: 6.5,
     types: ["grass", "poison"],
-    src: "https://...",
+    src: "../../assets/images/pokemons/bulbasaur.svg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
