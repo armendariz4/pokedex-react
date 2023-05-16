@@ -6,39 +6,38 @@ import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.svg";
 import { AboutTitle } from "../../atoms/AboutTitle";
 import { ChipGroup } from "../../molecules/ChipGroup";
 
-const PokemonCard = (props) => {
-  const types = ["grass", "poison"];
+const PokemonCard = ({ pokemon }) => {
+  const mainType = pokemon.types[0];
+  const styles = `card type-${mainType}`;
+
   return (
-    <article className="card type-grass">
+    <article className={styles}>
       <div className="card-header">
-        <span className="pokemon-name">Bulbasaur</span>
-        <span className="pokemon-number">#001</span>
+        <span className="pokemon-name">{pokemon.name}</span>
+        <span className="pokemon-number">#{pokemon.id}</span>
       </div>
       <div className="pokemon-attributes">
         <img src={bulbasaur} alt="" className="poke-image"></img>
-        <ChipGroup types={types} />
-        <AboutTitle type={types[0]} />
+        <ChipGroup types={pokemon.types} />
+        <AboutTitle type={mainType} />
         <div className="pokemon-data">
           <div className="data-group">
             <div className="title-data-group">
               <WeightIcon />
-              <p>6,9 kg</p>
+              <p>{pokemon.weight} kg</p>
             </div>
             <span className="data-group-subtitle">Weight</span>
           </div>
-          <div className="divider"></div>
+          <div className="divider" />
           <div className="data-group">
             <div className="title-data-group">
               <HeightIcon />
-              <p>0,7 m</p>
+              <p>{pokemon.height} m</p>
             </div>
             <span className="data-group-subtitle">Height</span>
           </div>
         </div>
-        <p className="pokemon-description">
-          There is a plant seed on its back right from the day this Pokémon is
-          born.
-        </p>
+        <p className="pokemon-description">{pokemon.description} </p>
       </div>
     </article>
   );
