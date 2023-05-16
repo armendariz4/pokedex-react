@@ -1,10 +1,10 @@
+import React from "react";
 import "./styles.css";
 import { ReactComponent as WeightIcon } from "../../../../assets/images/icons/weight.svg";
 import { ReactComponent as HeightIcon } from "../../../../assets/images/icons/height.svg";
 import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.svg";
-
+import { AboutTitle } from "../../atoms/AboutTitle";
 import { ChipGroup } from "../../molecules/ChipGroup";
-import { AboutTitle } from "../../atoms/AboutTitle/AboutTitle";
 
 const PokemonCard = (props) => {
   const types = ["grass", "poison"];
