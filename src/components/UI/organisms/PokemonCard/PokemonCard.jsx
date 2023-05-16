@@ -1,6 +1,6 @@
 import "./styles.css";
 import { ReactComponent as WeightIcon } from "../../../../assets/images/icons/width.svg";
-import height from "../../../../assets/images/icons/height.svg";
+import { ReactComponent as HeightIcon } from "../../../../assets/images/icons/height.svg";
 import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.svg";
 
 import { ChipGroup } from "../../molecules/ChipGroup";
@@ -29,7 +29,7 @@ const PokemonCard = (props) => {
           <div className="divider"></div>
           <div className="data-group">
             <div className="title-data-group">
-              <img src={height} width={16} height={16} alt="height icon" />
+              <HeightIcon />
               <p>0,7 m</p>
             </div>
             <span className="data-group-subtitle">Height</span>
