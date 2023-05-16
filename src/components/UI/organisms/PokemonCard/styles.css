@@ -44,6 +44,9 @@
   right: 0;
   margin: auto;
   top: -99px;
+  /* Añado estas dos porque al no conseguir importar la foto desde las carpetas y hacerlo desde internet, la imagen es enooorme */
+  height: 150px;
+  width: 150px;
 }
 
 .pokemon-data {

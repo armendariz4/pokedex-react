@@ -4,7 +4,7 @@ import { ReactComponent as WeightIcon } from "../../../../assets/images/icons/we
 import { ReactComponent as HeightIcon } from "../../../../assets/images/icons/height.svg"; // Importo una imagen metiendola dentro de un componente llamado "HeightIcon", con la ayuda de la herramienta "ReactComponent"
 import { AboutTitle } from "../../atoms/AboutTitle"; // Importo la función AboutTitle para usarlo mas tarde en el código
 import { ChipGroup } from "../../molecules/ChipGroup"; // Importo la función ChipGroup para uarla mas tarde en el código
-
+//import { ReactComponent as Imagen } from "../../../../assets/images/pokemons/bulbasaur.png";
 //___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 // DIEGO SI LEES ESTO, ESTOY MODIFICANDO EL CÓDIGO, ACEPTAME POR DISCORD PARA HABLAR Y NO PISARNOS TRABAJO AL PUSHEAR
@@ -17,17 +17,14 @@ const PokemonCard = ({ pokemon }) => {
 
   // De aqui para abajo, será lo que devuelva la función PokemonCard
   return (
+    // Hace una area con las propiedades de styles (Es la carta en sí)
     <article className={styles}>
       <div className="card-header">
         <span className="pokemon-name">{pokemon.name}</span>
         <span className="pokemon-number">#{pokemon.id}</span>
       </div>
       <div className="pokemon-attributes">
-        <img
-          src={"../../../../assets/images/pokemons/bulbasaur.svg"}
-          alt=""
-          className="poke-image"
-        ></img>
+        <img src={pokemon.src} alt="" className="poke-image"></img>
         <ChipGroup types={pokemon.types} />
         <AboutTitle type={mainType} />
         <div className="pokemon-data">
