@@ -1,5 +1,5 @@
 import "./styles.css";
-import weight from "../../../../assets/images/icons/width.svg";
+import { ReactComponent as WeightIcon } from "../../../../assets/images/icons/width.svg";
 import height from "../../../../assets/images/icons/height.svg";
 import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.svg";
 
@@ -21,7 +21,7 @@ const PokemonCard = (props) => {
         <div className="pokemon-data">
           <div className="data-group">
             <div className="title-data-group">
-              <img src={weight} width={16} height={16} alt="weight icon" />
+              <WeightIcon />
               <p>6,9 kg</p>
             </div>
             <span className="data-group-subtitle">Weight</span>
