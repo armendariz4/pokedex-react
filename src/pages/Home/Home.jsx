@@ -18,7 +18,7 @@ const pokemons = [
     height: 1.0,
     weight: 13.0,
     types: ["grass", "poison"],
-    src: "C:/Users/JAVIE/OneDrive - UPNA/Escritorio/Curso Desarrollo de software/Pokedez/pokedex-react/src/assets/images/pokemons/bulbasaur.png",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -28,7 +28,7 @@ const pokemons = [
     height: 2.0,
     weight: 100.0,
     types: ["grass", "poison"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -38,7 +38,7 @@ const pokemons = [
     height: 0.6,
     weight: 8.5,
     types: ["fire"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -48,7 +48,7 @@ const pokemons = [
     height: 1.1,
     weight: 19.0,
     types: ["fire"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -58,7 +58,7 @@ const pokemons = [
     height: 1.7,
     weight: 90.5,
     types: ["fire", "flying"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -68,7 +68,7 @@ const pokemons = [
     height: 0.5,
     weight: 9.0,
     types: ["water"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -78,7 +78,7 @@ const pokemons = [
     height: 1.0,
     weight: 22.5,
     types: ["water"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -88,7 +88,7 @@ const pokemons = [
     height: 1.6,
     weight: 85.5,
     types: ["water"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -98,7 +98,7 @@ const pokemons = [
     height: 0.3,
     weight: 2.9,
     types: ["bug"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -108,7 +108,7 @@ const pokemons = [
     height: 0.7,
     weight: 9.9,
     types: ["bug"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
@@ -118,7 +118,7 @@ const pokemons = [
     height: 1.1,
     weight: 32.0,
     types: ["bug", "flying"],
-    src: "https://...",
+    src: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
