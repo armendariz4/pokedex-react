@@ -25,5 +25,8 @@ const pokemons = [
 ];
 
 export const Home = () => {
-  return <PokemonCard pokemon={pokemons[0]} />;
+  // return <PokemonCard pokemon={pokemons[0]} />;
+  return pokemons.map((pokemon) => {
+    return <PokemonCard pokemon={pokemon} />;
+  });
 };
