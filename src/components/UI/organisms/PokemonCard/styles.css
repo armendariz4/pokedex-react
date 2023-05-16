@@ -77,6 +77,15 @@
   text-align: justify;
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: var(--base);
+  margin: auto;
+  max-width: 948px;
+  justify-content: center;
+}
+
 .divider {
   width: 1px;
   background: var(--light-gray);

@@ -22,11 +22,35 @@ const pokemons = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   },
+  {
+    id: "002",
+    name: "Charmander",
+    height: 6.3,
+    weight: 9.5,
+    types: ["steel", "bug"],
+    src: "https://...",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
+  },
+  {
+    id: "002",
+    name: "Charmander",
+    height: 6.3,
+    weight: 9.5,
+    types: ["steel", "bug"],
+    src: "https://...",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
+  },
 ];
 
 export const Home = () => {
   // return <PokemonCard pokemon={pokemons[0]} />;
-  return pokemons.map((pokemon) => {
-    return <PokemonCard pokemon={pokemon} />;
-  });
+  return (
+    <section className="card-container">
+      {pokemons.map((pokemon) => {
+        return <PokemonCard pokemon={pokemon} />;
+      })}
+    </section>
+  );
 };
