@@ -1,5 +1,5 @@
 import "./styles.css";
-import { ReactComponent as WeightIcon } from "../../../../assets/images/icons/width.svg";
+import { ReactComponent as WeightIcon } from "../../../../assets/images/icons/weight.svg";
 import { ReactComponent as HeightIcon } from "../../../../assets/images/icons/height.svg";
 import bulbasaur from "../../../../assets/images/pokemons/bulbasaur.svg";
 
