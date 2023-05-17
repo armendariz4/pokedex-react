@@ -85,7 +85,7 @@
   grid-template-columns: repeat(auto-fill, 300px);
   gap: var(--base);
   margin: auto;
-  max-width: 998px;
+  max-width: 968px;
   justify-content: center;
 }
 
@@ -94,8 +94,10 @@
   background: var(--light-gray);
 }
 
-.Home-page {
+.home-page {
   justify-content: center;
+  max-width: 968px;
+  margin: auto;
 }
 
 /* _________TYPES__________________________________________________________________________________________________________ */
