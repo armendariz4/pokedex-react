@@ -127,10 +127,13 @@ const pokemons = [
 export const Home = () => {
   // return <PokemonCard pokemon={pokemons[0]} />;
   return (
-    <section className="card-container">
-      {pokemons.map((pokemon) => {
-        return <PokemonCard pokemon={pokemon} />;
-      })}
-    </section>
+    <div className="Home-page">
+      <section className="Search-bar">Hola</section>
+      <section className="card-container">
+        {pokemons.map((pokemon) => {
+          return <PokemonCard pokemon={pokemon} />;
+        })}
+      </section>
+    </div>
   );
 };

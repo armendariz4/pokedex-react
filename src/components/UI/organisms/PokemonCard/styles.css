@@ -93,6 +93,12 @@
   width: 1px;
   background: var(--light-gray);
 }
+
+.Home-page {
+  justify-content: center;
+}
+
+/* _________TYPES__________________________________________________________________________________________________________ */
 .type-grass {
   background-color: var(--type-grass);
 }
