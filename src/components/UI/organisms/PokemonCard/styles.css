@@ -95,11 +95,37 @@
 }
 
 .home-page {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   max-width: 968px;
   margin: auto;
 }
 
+.header-page {
+  justify-content: center;
+  margin-bottom: 54px;
+}
+.search-bar-box {
+  display: flex;
+  align-items: center;
+  max-width: 502px;
+  height: 35px;
+  margin-top: 41px;
+  border: 2px solid;
+  border-color: var(--light-gray);
+  border-radius: 8px;
+}
+
+.search-bar-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  margin-right: 9px;
+}
+
+.search-bar-word {
+}
 /* _________TYPES__________________________________________________________________________________________________________ */
 .type-grass {
   background-color: var(--type-grass);

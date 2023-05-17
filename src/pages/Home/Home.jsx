@@ -128,7 +128,16 @@ export const Home = () => {
   // return <PokemonCard pokemon={pokemons[0]} />;
   return (
     <div className="home-page">
-      <section className="search-bar">Hola</section>
+      <section className="header-page">
+        <div className="search-bar-box">
+          <img
+            className="search-bar-icon"
+            src="https://icones.pro/wp-content/uploads/2021/02/loupe-et-icone-de-recherche-de-couleur-grise.png"
+            alt=""
+          />
+          <div className="search-bar-word">Hola</div>
+        </div>
+      </section>
       <section className="card-container">
         {pokemons.map((pokemon) => {
           return <PokemonCard pokemon={pokemon} />;
