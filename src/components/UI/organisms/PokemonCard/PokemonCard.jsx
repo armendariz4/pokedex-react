@@ -13,12 +13,14 @@ import { ChipGroup } from "../../molecules/ChipGroup"; // Importo la función Ch
 // Esto es una unica función, que nos creará la carta entera, en función del objeto pokemon que le llega como entrada
 const PokemonCard = ({ pokemon }) => {
   const mainType = pokemon.types[0]; // Del atributo type del objeto, pokemon, se escoge el primer elemento y ese será el tipo principal de la carta
-  const styles = `card type-${mainType}`; // mete en "styles", los estilo que tiene la clase "class" + la clase "typeX". Siendo X, el tipo principal, que se obtiene en la linea de código anterior.
+  const styles = {
+    "--main-color": `var(--type-${mainType})`,
+  };
 
   // De aqui para abajo, será lo que devuelva la función PokemonCard
   return (
     // Hace una area con las propiedades de styles (Es la carta en sí)
-    <article className={styles}>
+    <article className="card" style={styles}>
       <div className="card-header">
         <span className="pokemon-name">{pokemon.name}</span>
         <span className="pokemon-number">#{pokemon.id}</span>
