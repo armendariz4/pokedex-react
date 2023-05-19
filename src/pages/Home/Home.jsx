@@ -128,14 +128,17 @@ export const Home = () => {
   // return <PokemonCard pokemon={pokemons[0]} />;
   return (
     <div className="home-page">
-      <section className="header-page">
+      <section className="header-box">
+        <div className="header">Holi</div>
         <div className="search-bar-box">
           <img
             className="search-bar-icon"
             src="https://icones.pro/wp-content/uploads/2021/02/loupe-et-icone-de-recherche-de-couleur-grise.png"
             alt=""
           />
-          <div className="search-bar-word">Hola</div>
+          <div className="search-bar-word">
+            Indique el pokemon que desea buscar
+          </div>
         </div>
       </section>
       <section className="card-container">

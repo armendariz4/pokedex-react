@@ -94,27 +94,39 @@
   background: var(--light-gray);
 }
 
-.home-page {
+/* Lo quito porque al meterle este estilo, deja de hacerse responsive la carda-container */
+/* Lo suyo sería serparar home-page y card container, pero retunr solo puede devolver un elemento verdad?? */
+/* .home-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 968px;
   margin: auto;
+} */
+
+.header-box {
+  flex-direction: column;
+  justify-content: center;
+  height: 204px;
+  /* Porque no se pone statico arriba?? */
 }
 
-.header-page {
-  justify-content: center;
-  margin-bottom: 54px;
+.header {
+  height: 74px;
+  box-shadow: 2px;
 }
 .search-bar-box {
+  margin: auto;
+  /* Porque haciendo un justify content:center y display:flex en el padre de a caja no me lo hacía??? */
   display: flex;
   align-items: center;
   max-width: 502px;
   height: 35px;
-  margin-top: 41px;
+  /* margin-top: 41px; */
   border: 2px solid;
   border-color: var(--light-gray);
   border-radius: 8px;
+  color: var(--light-gray);
 }
 
 .search-bar-icon {
@@ -124,8 +136,8 @@
   margin-right: 9px;
 }
 
-.search-bar-word {
-}
+/* .search-bar-word {
+} */
 /* _________TYPES__________________________________________________________________________________________________________ */
 .type-grass {
   background-color: var(--type-grass);
