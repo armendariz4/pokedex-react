@@ -11,6 +11,7 @@ const mapPokemonData = (pokemonDTO) => {
     src: pokemonDTO.sprites.front_default,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
+    // TODO ->color: getRandomHexadecimalColor(),
   };
 };
 
