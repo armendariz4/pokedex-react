@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import PokemonCard from "../../components/UI/organisms/PokemonCard/PokemonCard";
 
 const mapPokemonData = (pokemonDTO) => {
-  console.log("data", pokemonDTO);
-
   return {
     id: pokemonDTO.id,
     name: pokemonDTO.name,
@@ -49,8 +47,6 @@ export const Home = () => {
   if (!pokemons) {
     return <div>Cargando...</div>;
   }
-
-  console.log("@@pokemons", pokemons);
 
   return (
     <div className="home-page">
