@@ -1,48 +1,16 @@
 import React, { useEffect, useState } from "react";
 import PokemonCard from "../../components/UI/organisms/PokemonCard/PokemonCard";
-
-const mapPokemonData = (pokemonDTO) => {
-  return {
-    id: pokemonDTO.id,
-    name: pokemonDTO.name,
-    height: pokemonDTO.height,
-    weight: pokemonDTO.weight,
-    types: pokemonDTO.types.map(({ type }) => type.name),
-    src: pokemonDTO.sprites.front_default,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
-    // TODO ->color: getRandomHexadecimalColor(),
-  };
-};
-
-const getPokemonData = async (pokemonUrl) => {
-  const response = await fetch(pokemonUrl);
-  const data = await response.json();
-  return mapPokemonData(data);
-};
+import { pokemonService } from "../../services/PokemonService";
 
 export const Home = () => {
   const [pokemons, setPokemons] = useState(undefined);
   // return <PokemonCard pokemon={pokemons[0]} />;
 
   useEffect(() => {
-    const getPokemons = async () => {
-      const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon?limit=151"
-      );
-      const data = await response.json();
-      const pokemons = data.results;
-
-      const pokemonDetailPromises = pokemons.map((pokemon) => {
-        return getPokemonData(pokemon.url);
-      });
-
-      Promise.all(pokemonDetailPromises).then((data) => {
-        setPokemons(data);
-      });
-    };
-
-    getPokemons();
+    (async () => {
+      const data = await pokemonService.getPokemons();
+      setPokemons(data);
+    })();
   }, []);
 
   if (!pokemons) {
