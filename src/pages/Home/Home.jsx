@@ -1,16 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PokemonCard from "../../components/UI/organisms/PokemonCard/PokemonCard";
-const getPokemon = (async () => {
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=25");
-  const jsonData = await response.json();
-  console.log(jsonData);
-  const nombre = jsonData.results[0].name;
-  console.log(nombre);
-})();
-const pokemons = [];
+
+const mapPokemonData = (pokemonDTO) => {
+  console.log("data", pokemonDTO);
+
+  return {
+    id: pokemonDTO.id,
+    name: pokemonDTO.name,
+    height: pokemonDTO.height,
+    weight: pokemonDTO.weight,
+    types: pokemonDTO.types.map(({ type }) => type.name),
+    src: pokemonDTO.sprites.other.home.front_default,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
+  };
+};
+
+const getPokemonData = async (pokemonUrl) => {
+  const response = await fetch(pokemonUrl);
+  const data = await response.json();
+  return mapPokemonData(data);
+};
 
 export const Home = () => {
+  const [pokemons, setPokemons] = useState(undefined);
   // return <PokemonCard pokemon={pokemons[0]} />;
+
+  useEffect(() => {
+    const getPokemons = async () => {
+      const response = await fetch(
+        "https://pokeapi.co/api/v2/pokemon?limit=25"
+      );
+      const data = await response.json();
+      const pokemons = data.results;
+
+      const pokemonDetailPromises = pokemons.map((pokemon) => {
+        return getPokemonData(pokemon.url);
+      });
+
+      Promise.all(pokemonDetailPromises).then((data) => {
+        setPokemons(data);
+      });
+    };
+
+    getPokemons();
+  }, []);
+
+  if (!pokemons) {
+    return <div>Cargando...</div>;
+  }
+
+  console.log("@@pokemons", pokemons);
+
   return (
     <div className="home-page">
       <section className="header-box">
