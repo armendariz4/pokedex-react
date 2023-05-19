@@ -4,7 +4,6 @@ import "./styles.css";
 export const Chip = ({ type }) => {
   const styles = {
     backgroundColor: `var(--type-${type})`,
-    textTransform: `capitalize`,
   };
 
   return (

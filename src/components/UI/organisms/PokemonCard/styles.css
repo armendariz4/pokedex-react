@@ -15,6 +15,7 @@
   align-items: center;
   color: var(--white);
   padding: 19px 17px 0px 19px;
+  text-transform: capitalize;
 }
 
 .pokemon-name {
@@ -43,7 +44,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  top: -99px;
+  top: -90px;
   /* Añado estas dos porque al no conseguir importar la foto desde las carpetas y hacerlo desde internet, la imagen es enooorme */
   height: 150px;
   width: 150px;

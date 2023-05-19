@@ -10,7 +10,7 @@ const mapPokemonData = (pokemonDTO) => {
     height: pokemonDTO.height,
     weight: pokemonDTO.weight,
     types: pokemonDTO.types.map(({ type }) => type.name),
-    src: pokemonDTO.sprites.other.home.front_default,
+    src: pokemonDTO.sprites.front_default,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet facilisis mi.",
   };
@@ -29,7 +29,7 @@ export const Home = () => {
   useEffect(() => {
     const getPokemons = async () => {
       const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon?limit=25"
+        "https://pokeapi.co/api/v2/pokemon?limit=151"
       );
       const data = await response.json();
       const pokemons = data.results;
